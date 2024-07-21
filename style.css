@@ -1,0 +1,28 @@
+/* CSS 的註解 */
+/* CSS Selector 選擇器: CSS 設定和HTML標籤的對應規則 */
+/* 標籤名稱選擇器:特色是直接寫標籤名稱 */
+body{background-color: #dddddd;}
+/* id選擇器: 特色是名字前面加 #  */
+#title-1{
+    text-decoration: line-through;}
+/* class 選擇器：特色是名字前面加 . */ /* 最重要最常用 */
+.title{
+    margin-bottom:10px; 
+    border:1px dashed blue;  
+    color:black; 
+    text-decoration: underline; 
+    font-weight: bold;
+    font-size: 24px ;}
+.content{
+    padding: 10px ; 
+    border:1px dashed blue;  
+    color:black; 
+    font size 24px;}
+.abc{
+    width: 50%; 
+    padding: 10px ; 
+    border:1px dashed blue;  
+    color:black; 
+    font-size:;}
+.redmark{color: red;}
+.underline{text-decoration: underline;}

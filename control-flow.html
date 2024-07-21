@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow 流程控制</title>
+</head>
+<body>
+    <script>
+    //20240717
+        // if 判斷式
+        /*
+            if(布林值){
+                如果對應的布林值是true，執行這個程式區塊，不然看下一個
+            }else if(布林值){
+                如果對應的布林值是true，執行這個程式區塊，不然看下一個
+            }else if(布林值){
+                如果對應的布林值是true，執行這個程式區塊，不然看下一個
+            }
+            ...
+            else{
+                如果對應的布林值是false，執行這個程式區塊
+            }
+        */
+       /*
+       let money = prompt("請問要領多少錢 ?", "");
+       money=parseInt(money);
+       if(money <= 10000){
+        console.log("你領的錢是",money, ", OK ");  
+        if(money==777){
+            console.log("lucky");
+        }      
+       }else{
+        console.log("你領的錢是",money," too much");
+       }
+       console.log("end");
+       */
+       /*
+            1.請使用者輸入自己的名字，如果輸入的是[辛巴]，印出'你是一隻獅子'，不然不做任何事情。
+            2.請使用者輸入領多少錢？ 
+                -超過10萬，印出： 太多，不給領
+                -不到100，印出：太少，不給領
+                -其他的， 印出: 可以
+       */
+      /*
+      let name= prompt("請輸入自己的名字");
+      if(name == "辛巴"){
+        console.log("你是一隻獅子");
+      }
+
+      let drawmoney= prompt("請問要領多少錢？", "");
+      drawmoney=parseInt(drawmoney);
+      if(drawmoney>100000){
+        console.log("太多，不給領");
+        }else if(drawmoney<100){
+            console.log("太少，不給領");
+        }else{
+        console.log("可以");
+        }
+        */
+
+//20240718
+/*
+    let n1=prompt("輸入一個整數","");
+    let n2=prompt("在輸入一個整數","");
+    n1=parseInt(n1);
+    n2=parseInt(n2);
+    let op=prompt("要做什麼運算 ? +, -, *, /","");
+    if(op == "+"){
+        console.log(n1+n2);
+    }else if (op == "-"){
+        console.log(n1-n2);
+    }else if (op == "*"){
+        console.log(n1*n2);
+    }else if (op == "/"){
+        console.log(n1/n2);
+    }else{
+        console.log("不支援的運算");
+    }
+*/
+    //while 迴圈
+    /*
+        while(布林值){
+            如果布林值是true ，執行這個程式區塊
+            程式區塊執行完畢後，跳到迴圈的開頭，再來一次
+        }
+    */
+   /*
+   let n1=1;
+   while (n1<=5){
+    //console.log(n1);
+    n1++;
+   }
+   console.log("end",n1);
+   */
+   
+    
+   //印出 12, 15, 18, 21, 24,27, 30, 33, 36, 39, 42
+   /*
+   let n=12;
+   while(n<=42){
+    console.log(n);
+    n=n+3;
+   }
+   console.log("end n", n);
+   //印出 10, 8, 6, 4, 2, 0, -2, -4, -6, -8, -10, -12, -14
+   let n1=10;
+   while (n1 >= (-14)){
+    console.log(n1);
+    n1=n1-2;
+   }
+   console.log("end n1", n1);
+   */
+
+   //計算 1+2+3+4+5 的總和
+   /*
+   let result=0;
+   result=result+1;
+   result=result+2;
+   result=result+3;
+   result=result+4;
+   result=result+5;
+   console.log(result);
+   */
+
+   /*
+  let result=0;
+  let n=1;
+  while(n<=5){
+    result=result+n;
+    n++;
+  }
+  console.log(result);
+  */
+
+  // 計算3 的5次方 是多少？
+  /*
+  let ans=1;
+  let n=1;
+  while(n <=5){
+    ans=ans*3;
+    n++;
+  }
+  console.log("ans=",ans);
+  */
+    // 和迴圈搭配的指令 break; 強制中斷迴圈
+    /*
+    let n=1;
+    while (n<=5){
+        if(n==3){
+            break;
+        }
+        console.log(n);
+        n++;
+    }
+    console.log("end",n);
+    */
+   /*
+    let max=prompt("請輸入一個正整數","");
+        max=parseInt(max);
+    while (max<1){
+        max=prompt("輸入錯誤，請再輸入一次","");
+        max=parseInt(max);
+        if(max>1){
+            break;
+        }
+    }
+    //主要工作
+    let result=0;
+    let n=1;
+    while(n<=max){
+    result=result+n;
+    n++;
+    }
+    console.log(result);
+    */
+   //for 迴圈
+   /*
+        for( 初始化的程式，進入迴圈前執行一次 ; 布林值 ; 迭代器，迴圈每次轉圈圈的時候執行一次 ){
+            如果布林值是true ，執行這個程式區塊
+            程式區塊執行完畢後，跳到迴圈的開頭，再來一次
+        }        
+   */
+
+   /*
+    let result=0;
+    //let n=1;
+    for (let n=1 ; n<=50; n++){
+        result=result+n;
+    //    n++;
+    }
+    console.log("end",result);
+    */
+    /*
+        使用for 迴圈印出下列資訊：
+        1 apple
+        2 apples
+        3 appples
+        ...
+        ...
+        11 apples
+        1 dozen apples
+        13 apples
+        14 apples
+        15 apples
+        ...
+        ...
+        23 apples
+
+        2 dozen apples
+        ....
+        100 apples
+    */
+   /*
+    for (let n=1; n<=100; n++){
+        if( n==1){
+            console.log(n,"apple");
+        }else if(n%12 == 0){
+            console.log( Math.floor(n/12),"dozen apples");
+        }else{
+            console.log(n,"apples");
+        } 
+    } 
+    */
+    //超級入門，新手>初級
+    /*
+    function calculate (start,end){
+        let result=0;
+        let n=start;
+        for (n; n<=end; n++){
+            result=result+n;
+         }
+         console.log(result);
+    }
+    calculate(3,6);
+    calculate(-2,3);
+    calculate(1,100);
+    */
+    /* 使用者輸入正整數，計算開根號的結果，娶小於但最接近的整數
+        16>4
+        17>4
+        24>4
+        25>5
+    */
+   let n=prompt("請輸入一個正整數","");
+   n=parseInt(n);
+   square (n);
+
+   function square(n){
+    console.log("輸入的數字是",n);
+    let i=1;
+    for(i; i*i<=n; i++){
+        console.log(i);
+    }
+
+    
+    if((i-1)*(i-1)  == n){
+        i=i-1;
+        console.log("剛好可以開根號",i);            
+    }else{
+        console.log("最後的整數是",i-1);
+     }
+   }
+
+    </script>
+</body>
+</html>

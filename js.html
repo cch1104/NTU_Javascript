@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        //單行註解
+        /*多行註解
+            Javascript
+            Java
+        */
+       /*
+       console.log("Hello Javascript");
+       console.log("Hello Javascript 2");
+       */
+       //資料
+       //數字
+       3;
+       3.14;
+       -555.5;
+       //字串:用來表達任意的文字
+       "Hello";
+       '哈摟';
+       //布林值:代表正面或反面
+       true;
+       false;
+       //空值
+       null;
+       undefined;
+       //在console 印出資料的指令 console.log(資料, 資料,.....);
+       console.log(3, -55555, -1234223423432);
+       console.log(-5555555 ,true, false, null, undefined);
+
+       //變數:儲存資料的名字 (名稱空間)
+       //宣告變數 > 使用已經宣告過的變數代替資料來寫程式
+       /*
+       let abc; //宣告變數的語法  let 變數名稱;
+       console.log(abc);
+       abc=3; //把資料存放進變數中的語法 變數名稱=資料;
+       console.log(abc);
+       abc="hello"; 
+       console.log(abc);
+       abc=false; 
+       console.log(abc);
+       let y=10;//宣告變數名稱，同時指定資料   let 變數名稱=資料;
+       console.log(y);
+       */
+       //運算符號
+       //算術運算: +, -, *, /, %
+       let test=(3+8)*2/5%2;
+       console.log(test);
+       //指定運算: =, +=, -=, *=, /=, %=
+       test=test+1;
+       console.log(test);
+       test=test*2;
+       console.log(test);
+       test+=1;
+       console.log(test);
+       //比較運算: >, <, >=, <=, !=
+       let ans=3<=2;
+       console.log(ans);
+       ans=10==11;
+       console.log(ans);
+       ans=10!=11;
+       console.log(ans);
+       ans="Hello"=="hello";
+       console.log(ans);
+       //單元運算: ++, --, !
+       let m=10;
+       m++; // m+=1; // m=m+1;
+       console.log(m);
+       m=!true; //反轉布林值
+       console.log(m);
+       //邏輯運算: &&, ||      只針對布林值做運算 &&: 且, ||:或 
+       /*
+         a  b  a&&b
+         0  0   0
+         0  x   x
+         x  0   x
+         x  x   x
+
+         a  b  a||b
+         0  0   0
+         0  x   0
+         x  0   0
+         x  x   x
+       */
+       let result=true && false;
+       console.log(result);
+       result=true||false;
+       console.log(result);
+
+       //讓使用者輸入兩個整數，計算乘法的結果
+       //要求使用者輸入的指令      prompt(字串, 字串); 總是以[字串]的形式取得資料
+       let n1 = prompt("請輸入一個數字","");
+       let n2 =  prompt("請輸入第二個數字","");
+       //明確地把字串轉換成整數 parseInt(字串)
+       n1=parseInt(n1);  //"5" =>5
+       n2=parseInt(n2);  //"4" =>4
+       console.log(n1, n2);
+       let n3= n1 - n2;
+       console.log(n3);
+    </script>
+</body>
+</html>

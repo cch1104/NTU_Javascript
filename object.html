@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件 Object</title>
+</head>
+<body>
+    <script>
+        //資料：數字、字串、布林值、空值、函式、物件
+        //物件：用來包裝其他資料的容器
+        //建立物件>使用建立好的物件
+        /*
+            建立一個空白的物件 new Object();
+        */
+       /* 1.建立物件的基本方法 */
+       let point = new Object();
+       //物件的屬性(atttribute/property):物件成員的資料不是函式
+       //物件的方法(Method)：物件成員的資料是函式
+       point.x=3; //建立物件的成員 (Member) 物件.成員名稱=資料;
+       point.y=4;
+       // this 是函式的綁定物件 (Binding Object)
+       /*
+            在不同的程式脈絡中，this 代表不同的東西：
+                -在物件的方法中使用this，代表物件本身
+                -在全域的函式中使用 this，代表window 物件
+                -.....
+                -.....
+        //what is 'this'? 
+            function test(){
+                console.log(this);
+            }
+            test();
+       */
+       point.render=function(){
+        console.log(this);
+        console.log(this.x, this.y);
+       };
+       //使用物件:具體來說是使用物件中的成員
+       console.log(point);
+       console.log(point.x+point.y);
+       point.render();
+
+       /*
+        建立一個人類的物件，包含下面成員：
+        name
+        age
+        talk:函式，印出姓名和年齡
+        呼叫物件的talk 方法，印出姓名和年齡
+       */
+
+       let person = new Object();
+       person.name= "Jennifer";
+       person.age=18;
+       person.talk=function(){
+        console.log(this.name,"is", this.age, "years old");
+       };
+       person.talk();   
+
+
+       /* 2. 建立物件的基本方法 json(Javascript object notation)格式 */
+       // 建立物件 {成員名稱：資料, 成員名稱:資料,....}
+       let pointJS={
+            x:3, 
+            y:4, 
+            render:function(){
+                console.log(this.x, this.y);
+            }
+        };
+        // example:
+        let personJS={
+            name:"Jennifer",
+            age: 18,
+            talk: function(){
+                console.log("Json method:", this.name, "is", this.age, "years old");
+            }
+        }
+        personJS.talk();
+
+        /* 3. 使用建構函式 (constructor) 建立物件*/
+        /*
+        function createPointObject(x,y){
+            let point=new Object;
+            point.x=x;
+            point.y=y;
+            point.render=function(){
+                console.log(this,x,this.y);
+            };
+            return point;
+        }
+        let p1=createPointObject(3,4);
+        let p2=createPointObject(0,0);
+        //計算兩個點的距離
+        let distance=Math.sqrt(
+            Math.pow(p1.x-p2.x,2)+
+            Math.pow(p1.y-p2.y,2));
+        console.log("建構函式方法算出：",distance);
+        */
+
+       function Point(x,y){
+            //直接使用this 代表我們要建立的物件
+            this.x=x;
+            this.y=y;
+            point.render=function(){
+                console.log(this,x,this.y);
+            };
+            //return point; 自動回傳 this
+        }
+        //呼叫建構函式 new 建構函式名稱(參數資料,參數資料,...);
+        let p1=new Point(3,4);
+        let p2=new Point(0,0);
+        console.log(p1,p2);
+        //計算兩點距離
+        let distance=Math.sqrt(
+            Math.pow(p1.x-p2.x,2)+
+            Math.pow(p1.y-p2.y,2));
+        console.log("建構函式方法算出：",distance);
+
+
+
+        /* 1.建立建構函式，用來產生人類物件，
+            name:
+            age:
+            talk
+           2.呼叫建構函式，建立人類物件
+           3.呼叫人類物件的talk 方法，印出姓名和年齡
+        */
+
+        console.log("");
+        console.log("=====================20240719 練習=========================");
+        function createPerson(name,age){
+            this.name=name;
+            this.age=age;
+            this.talk=function(){
+                console.log("建構函式方法：",this.name,"is",this.age,"years old");
+            };
+        }
+        let person1=new createPerson("Mary",20);
+        let person2=new createPerson("Trump", 21);
+        person1.talk();
+        person2.talk();
+        
+    </script>  
+</body>
+</html>

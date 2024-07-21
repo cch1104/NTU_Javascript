@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <!-- 兩個最常使用到的HTML標籤:
+            <div>: 沒有預設模式的block 區塊行標籤
+            <span>: 沒有預設樣式的inline 行內行標籤
+        關於 Box Model。
+    -->
+    <div id="title-1" class="title">這是段落一的標題</div>  
+    <div class="content">
+        今天的<span class="redmark underline">天氣</span>很熱。
+    </div>
+    <!--20240716--> 
+    <div class="title">這是段落二的標題</div>  
+    <div class="content">
+        今天的<span class="redmark">心情</span>不錯。
+    </div>
+    <!--
+        區塊的寬高： (只對區塊模式的標籤有效)
+        寬度：預設把上一層的區塊張滿，或者用width設定
+        高度：預設跟著內容縮放，或者用height設定
+    -->
+    <!-- 行內標籤設定width是無意義的
+    <div class="abc">
+        今天的天氣很熱 <span style=" width: 200px;">div 中有 div，行內行的標籤設定width 是沒有意義的</span>  
+        <div style="background-color: yellow; ">div 中的  div 測試</div>
+        第三行 <br/> 第四行
+    </div>
+    -->
+</body>
+</html>

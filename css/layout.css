@@ -1,0 +1,34 @@
+.head{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color:#223344;
+    color:#ffffff;
+    font-size: 2em;
+    font-weight: bold;
+}
+.welcome{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 45px;
+    background-color: antiquewhite;
+    font-size: 2em;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    /* 讓內部的框框：水平排列 */
+    display: flex;
+}
+.box{
+    background-color: #ffdddf;
+    width:280px;
+    margin: 10px;
+
+}
+

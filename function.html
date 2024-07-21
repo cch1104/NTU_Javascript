@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函式 Function</title>
+</head>
+<body>
+    <script>
+        //函式：用來包裝一段程式碼
+        //建立函式>呼叫建立好的函式
+        /*
+            建立函式的語法：
+            function 函式名稱(參數名稱,參數名稱,．．．．){
+                函式對應的程式區塊
+            }
+            
+            let 函式名稱=function(參數名稱,參數名稱,...){
+                函式對應的程式區塊        
+            };
+
+            let 函式名稱=(參數名稱,參數名稱,...) =>{
+                函式對應的程式區塊        
+            };
+
+            呼叫函式的語法：
+                函式名稱(參數資料,參數資料,...);
+
+        */
+       /*
+       function show(a){
+        console.log(a);
+       }
+        show(5);
+        show(true);
+        show("hello");
+        */
+       /*
+       function multiply(n1,n2){
+            console.log(n1*n2);
+       }
+       multiply(3,-3);
+       multiply(3,3);
+       multiply(-3,-3);
+       */
+
+
+       //函式的三件事情：基本運作方式、參數、回傳值
+       /*
+        function prompt(text,defaultvalue){
+            //根據 text 和 default 產生一個輸入對話框
+            return 使用者輸入的字串;
+        }
+        
+       */
+        //資料:數字、字串、布林值、空值、函式
+/*
+        function test(abc){
+            console.log(abc);
+            return function(){
+                console.log("test");
+            };
+        }
+
+        test (function(){
+            console.log("hello");
+        })
+*/
+       //let n1=prompt(" please input a number","");
+
+       //強制中斷函式的指令，return 回傳的資料;
+       /*
+        function multiply(n1,n2){
+            console.log("執行乘法函式");
+            return n1*n2;
+        }
+        
+        let x=5;
+        console.log(x);
+
+        let multiply1=function(n1,n2){
+            return n1*n2;
+        };
+
+        console.log(multiply1);
+        let newName=multiply1;
+        console.log(newName(4,5));
+        */
+        /*
+        multiply1=10;
+        console.log(multipply1*2);
+        */
+       /*
+        let ans=multiply1(3,4);
+        console.log(ans);
+        */
+        
+
+        //網頁載入時，立刻跳出一個對話框，詢問使用者是否要刪除
+        //如果使用者點  [確定] ， 在console 印出已刪除;否則不做任何事情
+        //使用內建的函式 confirm
+        
+       let result=confirm("Press a button!");
+       //console.log("result=", result);
+       if (result){
+        console.log("已刪除");
+       }
+       
+
+
+    </script>
+</body>
+</html>

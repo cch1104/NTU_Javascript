@@ -1,0 +1,43 @@
+.head{
+    height: 100px;
+    background-color:#223344;
+    color:#ffffff;
+    font-size: 2em;
+    font-weight: bold;
+
+    /* 水平排列 */
+    display: flex;    
+}
+.welcome{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 200px;
+    background-color: antiquewhite;
+    font-size: 2em;
+    font-weight: bold;
+}
+.main{
+    /* 讓內部的框框：水平排列 */
+    display: flex;
+    /* 控制內部框框的水平對齊方式 */
+    justify-content: center;
+    text-align: center;
+}
+.box{
+    background-color: #ffdddf;
+    width:280px;
+    margin: 10px;
+}
+.head1{
+     width:50% ;
+     display: flex; 
+     justify-content: left; 
+     align-items: center;
+}
+.head2{
+     width:50% ;
+     display: flex; 
+     justify-content: right; 
+     align-items: center;
+}
